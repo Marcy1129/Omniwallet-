@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniWallet – Direct Lite</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>OmniWallet – Direct Lite</h1>
+    <div class="card">
+      <label>Your Address</label>
+      <div id="address">loading…</div>
+      <button id="refresh">Refresh Balances</button>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Ethereum</h2>
+        <div id="eth-balances">Loading…</div>
+      </div>
+      <div class="card">
+        <h2>Base</h2>
+        <div id="base-balances">Loading…</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Send</h2>
+      <div class="row">
+        <label>Chain</label>
+        <select id="send-chain">
+          <option value="eth">Ethereum</option>
+          <option value="base">Base</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>Recipient</label>
+        <input id="send-to" placeholder="0x…">
+      </div>
+      <div class="row">
+        <label>Amount (ETH)</label>
+        <input id="send-amount" placeholder="0.01">
+      </div>
+      <button id="send-btn">Send</button>
+      <div id="send-status"></div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
